@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Barlow';
 }
 
 body { 
@@ -9,13 +10,13 @@ body {
   margin: auto;
   font-family: 'Barlow';
   line-height: 1.5;
-  background-color: #040707fd;
+  background-color: #ffffff;
   
 
 }
 
 main {
-  background-color: #040707;
+  background-color: blue;
   margin-top: 5px;
   padding: 5px;
   color: #ddd;
@@ -23,11 +24,10 @@ main {
 }
 
 .header {
-  background-color: #040707;
+  background-color: green;
   text-align: left;
   margin: 5px;
-  padding-top: 6px;
-  padding-left: 2px;
+  padding: 5px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -38,7 +38,7 @@ main {
 .navbar {
   background-color: #040707;
   text-align: left;
-  margin: 5px;
+  margin: 0px;
   padding: 0;
   height: auto;
   overflow: hidden;
@@ -51,11 +51,10 @@ main {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  padding: 14px 20px;
   background-color: #040707;
   border-radius: 5px;
-  margin: 3px;
+  text-decoration: none;
   font-family: 'Barlow';
   font-style: italic;
   font-weight: 500;
@@ -114,7 +113,7 @@ main {
     position: relative;
     animation-name: example;
     animation-duration: 10s;
-    background: url(/IMG/img0003.jpg);
+    background: url(/IMG/CoronaCamera009.jpg);
     background-repeat: round
     
 }
