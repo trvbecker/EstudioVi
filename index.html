@@ -44,7 +44,7 @@
                     <img class="content-item-image" src="./IMG/001.jpg" alt="IMG01">
                     <div class="content-item-hover" style="background-image: url('./IMG/001.jpg')"></div>
                 </li>
-                <li class="content-item">
+                <li class="content-item active">
                     <img class="content-item-image" src="./IMG/002.jpg" alt="IMG01">
                     <div class="content-item-hover" style="background-image: url('./IMG/002.jpg')"></div>
                 </li>
@@ -78,5 +78,24 @@
         
       </div>
     </main>
+    <script>
+
+
+        const items = document.querySelectorAll('.content-item');
+        let active = [ ...items ].findIndex(item => /active/.test(item.className));
+
+        for (let i = 0, t = items.length; i < t; i++) {
+            items[i].addEventListener('mouseenter', event => {
+                if (active !== -1) {
+                    items[active].classList.remove('active');
+                    active = i;
+                }
+
+                event.target.classList.add('active');
+            });
+        }
+
+
+    </script>
     </body>
 </html>

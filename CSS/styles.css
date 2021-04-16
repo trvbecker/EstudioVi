@@ -94,8 +94,6 @@ main {
   align-items: flex-end;
   position: relative;
   overflow: hidden;
-  background-image: url('../IMG/005.jpg');
-  background-size: cover;
 }
 
 .content-thumbs {
@@ -121,7 +119,6 @@ main {
   transition: opacity 0.25s ease-in-out;
 }
 
-.content-item:hover .content-item-image,
 .content-item.active .content-item-image {
   opacity: 0;
 }
@@ -138,7 +135,6 @@ main {
   transition: opacity ease-in-out 0.5s;
 }
 
-.content-item:hover .content-item-hover,
 .content-item.active .content-item-hover {
   display: block;
   opacity: 1;
