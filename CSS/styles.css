@@ -37,6 +37,10 @@ main {
   border-radius: 5px;
 }
 
+
+/*--------------------*/
+
+
 .header {
   background-color: #040707;
   text-align: left;
@@ -49,8 +53,8 @@ main {
   
 }
 
-/*--------------------*/
-.navbar {
+
+.header-navbar {
   background-color: #040707;
   text-align: left;
   margin: 0px;
@@ -58,10 +62,9 @@ main {
   height: auto;
   overflow: hidden;
   border-radius: 5px;
-
 }
 
-.navbar a {
+.header-navbar a {
   float: right;
   display: block;
   color: #f2f2f2;
@@ -74,143 +77,73 @@ main {
   font-weight: 500;
 }
 
-.navbar a:hover {
+.header-navbar a:hover {
   background-color: #ddd;
   color: black
-
 }
 
-.navbars {
+
+
+
+.content {
   max-width: 900px;
   height: 400px;
-  background-color: red;
-  text-align: center;
-  margin: 5px;
-  padding: 5px 5px 20x 10px;
+  background-color: #ddd;
   border-radius: 5px;
   display: flex;
-  justify-content: space-evenly;
-}
-
-/*
-.navbars img {
-  display: flex;
-  color: #f2f2f2;
-  text-align: center;
-  margin: 2px;
-  text-decoration: none;
-  background-color: #040707;
-  max-height: 100%;
-  border-radius: 4px;
-  display: flex;
-
-}
-
-.navbars a:hover {
-  background-color: #ddd;
-  color: black
-
-}
-*/
-/*--------------------*/
-
-.main-pics {
-
-  
-    max-width: 900px;
-    height: 400px;
-    margin: 5px;
-    padding-top: 3px;
-
-    position: relative;
-    background-color: yellow;
-    /*
-    animation-name:test;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    */
-    background-repeat: round;
-    display: none;
-    
-}
-
-.main-pics2 {
-
-  
-  max-width: 900px;
-  height: 400px;
-  margin: 5px;
-  padding-top: 3px;
-
+  align-items: flex-end;
   position: relative;
-  background-color: green;
-  /*
-  animation-name:test;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  */
-  background-repeat: round;
- 
+  overflow: hidden;
+  background-image: url('../IMG/005.jpg');
+  background-size: cover;
 }
 
-.one {
-    
-    height: 100px;
-    width: 200px;
-    background-color: green;
-    background: url(/IMG/004.jpg);background-repeat:round;
-    
-    /* animation-name:test;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    
- */
+.content-thumbs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  
 }
 
-.one:hover ~ .two {    
-  
-  
-  /*
-  animation-name:test;
-  animation-duration: 10s;
-  
-  animation-iteration-count: infinite;
-  background-repeat: round
-  */
-  
-    background-color: red;
-    
-    background: url(/IMG/002.jpg);
-    background-repeat:round;
-   
+.content-item {
+  flex: 1 1 200px;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.two {
-    
-  height: 100px;
-  width: 200px;
-  background-color: green;
-  background: url(/IMG/003.jpg);background-repeat:round;
-  
-  /* animation-name:test;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  
-*/
+.content-item-image {
+  border: 1px solid white;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.25s ease-in-out;
 }
 
-.two2 {
-    
-  
-  background-color: green;
-  background: url(/IMG/002.jpg);background-repeat:round;
-  
-  /* animation-name:test;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  
-*/
+.content-item:hover .content-item-image,
+.content-item.active .content-item-image {
+  opacity: 0;
 }
+
+.content-item-hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-size: cover;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.content-item:hover .content-item-hover,
+.content-item.active .content-item-hover {
+  display: block;
+  opacity: 1;
+}
+
 
 
 
